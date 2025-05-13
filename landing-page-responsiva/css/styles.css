@@ -81,7 +81,7 @@ button {
     justify-items: center;
     align-items: center;
     text-align: center;
-    min-height: 100dvh;
+    min-height: 0dvh;
     width: 100dvw;
     padding-top: 3rem;
 }
@@ -132,12 +132,12 @@ button {
 .schedule {
     display: flex;
     flex-direction: column;
-    min-height: 80dvh;
+    min-height: 40dvh;
     width: 100dvw;
     justify-items: center;
     align-items: center;
     gap: 2rem;
-    padding-top: 3rem;
+    padding: 3rem 0rem;
 }
 
 
@@ -149,6 +149,7 @@ button {
     gap: 2rem;
     justify-items: center;
     align-items: center;
+    justify-content: center;
 }
 
 .schedule-item {
@@ -171,12 +172,15 @@ button {
     min-height: 70dvh;
     width: 100dvw;
     margin-bottom: 2rem;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
 }
 
 .newsletter-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, row);
     width: 100%;
     height: 100%;
     gap: 1rem;
@@ -184,6 +188,7 @@ button {
 
 .newsletter-image {
     display: flex;
+    width: 100%;
     justify-content: center;
     grid-column: span 2;
     grid-row: 1;
@@ -283,4 +288,100 @@ button {
     }
 
 }
+
+/* Versão desktop */
+
+/* Notebooks médios - 1024px */
+@media screen and (min-width: 1024px){
+    
+    .speakers {
+        min-height: 50dvh;
+    }
+
+    .speakers-grid {
+        flex-direction: row;
+        width: 90%;
+    }
+
+    .schedule {
+        min-height: 60dvh;
+    }
+
+    .schedule-grid {
+        flex-flow: row wrap;
+    }
+
+    .schedule-item {
+        width: 45%;
+    }
+
+    .newsletter {
+        min-height: 55dvh;
+    }
+
+
+    .newsletter-image {
+        margin-right: 7rem;
+        justify-content: end;
+        align-items: end;
+        height: 100%;
+        width: 100%;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .newsletter-image img {
+        padding: 0;
+        height: 80%;
+        width: 80%;
+        object-fit: contain;
+    }
+
+
+    .newsletter-text {
+        gap: 1rem;
+        margin-left: 7rem;
+        text-align: left;
+        height: 100%;
+        width: 70%;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .form-group {
+        align-items: start;
+    }
+}
+
+/* Desktop médio - 1440 */
+@media screen and (min-width: 1920px) {
+    .newsletter-image {
+        margin-right: 7rem;
+        justify-content: end;
+        align-items: center;
+    }
+    
+}
+
+/* Desktop grande - 1600px */
+
+@media screen and (min-width: 1600px){
+    .newsletter-image {
+        align-items: center;
+    }
+}
+
+/* Desktop Full HD */
+
+@media screen and (min-width: 1900px){
+    .newsletter-image {
+        align-items: start;
+    }
+   
+    .newsletter-image img {
+        height: 80%;
+    }
+}
+
+
 
